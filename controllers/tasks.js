@@ -19,8 +19,11 @@ db.on('disconnected', () => console.log('mongo disconnected'));
 
 //INDUCES
 //Index
-taskRouter.get('/home', (req,res) => {
-    res.render('index.ejs')
+taskRouter.get('/home', async (req,res) => {
+    const allTasks = await Task.find({})
+    res.render('index.ejs', {
+        task: allTasks
+    })
 })
 
 //New
@@ -31,7 +34,7 @@ taskRouter.get('/new', (req, res)=>{
 //Delete
 taskRouter.delete('/:id', async (req,res)=>{
     await Task.findByIdAndRemove(req.params.id)
-    res.redirect('/show')
+    res.redirect('/home')
 })
 
 //Update
@@ -44,13 +47,14 @@ taskRouter.put('/:id', async (req,res)=>{
 })
 
 //Create
-taskRouter.post('/', (req, res)=>{
-    const newTask = new Task(req.body)
-    newTask.save().then(res.redirect ('/show'))
+taskRouter.post('/', async (req, res)=>{
+    const newTask = new Task({
+        task: req.body.task})
+   await newTask.save().then(res.redirect ('/home'))
 })
 
 //Edit
-taskRouter.get('/show/:id/edit', async (req, res)=>{
+taskRouter.get('/:id/edit', async (req, res)=>{
     const selectedTask = await Task.findById(req.params.id)
     res.render('edit.ejs', {
         task: selectedTask,

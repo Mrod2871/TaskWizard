@@ -39,19 +39,23 @@
       <h2>Task Wizard</h2>
       <div class="task">
         <form action="/" method="POST" class="task-header">
-          <input type="text" name="content" placeholder=" Enter Task" />
+          <input type="text" name="task" placeholder=" Enter Task" />
           <button type="submit"><span class="fas fa-plus"></span></button>
         </form>
         <ul class="taskList">
+          <% task.forEach(task => { %>
           <li class="taskLi-item">
-            <div class="taskLi-item-name"></div>
-            <a href="" class="edit">
-              <span class="fa-solid fa-pen"></span>
-            </a>
-            <a href="" class="remove">
-              <span class="fa-solid fa-times"></span>
-            </a>
+            <div class="taskLi-item-name"><%=task.task %></div>
+            <div id="btns">
+              <a href="/<%=task._id %>/edit/" class="edit">
+                <span class="fa-solid fa-pen" id="editBtn"></span>
+              </a>
+              <form action="/<%=task.id %>?_method=DELETE" method="POST">
+                <button type="submit" class="fa-solid fa-times"></button>
+              </form>
+            </div>
           </li>
+          <% }) %>
         </ul>
       </div>
     </div>
