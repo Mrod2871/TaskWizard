@@ -20,6 +20,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(methodOverride("_method"))
 app.use('/public', express.static('public'))
 
+
 //Controllers
 const tasksController = require('./controllers/tasks')
 app.use('/', tasksController)

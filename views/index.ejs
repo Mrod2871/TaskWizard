@@ -1,40 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="../public/navbar.css">
-        <link rel="stylesheet" href="../public/style.css">
-        <title>Task Wizard</title>
-    </head>
-    <body>
-        <div class="navbar">
-            <div class="container nav">
-                <input class="checkbox" id="" type="checkbox"
-                name=""
-                />
-                <div class="lines"
-                >
-                    <div class="line line1"></div>
-                    <div class="line line2"></div>
-                    <div class="line line3"></div>
-                </div>
-                <a href="/home" class="logo">
-                    <h1>Task Wizard</h1>
-                </a>
-                <div class="menu">
-                    <li class="links">
-                        <a href="/home">Home</a>
-                    </li>    
-                    <li class="links">
-                        <a href="/week">Week</a>
-                    </li>
-                    <li class="links">
-                        <a href="/settings">Settings</a>
-                    </li>
-                </div>
-            </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../public/navbar.css" />
+    <link rel="stylesheet" href="../public/style.css" />
+    <script
+      src="https://kit.fontawesome.com/f944157f4a.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <title>Task Wizard</title>
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="container nav">
+        <input class="checkbox" id="" type="checkbox" name="" />
+        <div class="lines">
+          <div class="line line1"></div>
+          <div class="line line2"></div>
+          <div class="line line3"></div>
         </div>
-    </body>
+        <a href="/home" class="logo">
+          <h1>Task Wizard</h1>
+        </a>
+        <div class="menu">
+          <li class="links">
+            <a href="/home">Home</a>
+          </li>
+          <li class="links">
+            <a href="/settings">Settings</a>
+          </li>
+        </div>
+      </div>
+    </div>
+    <div class="taskContainer">
+      <h2>Task Wizard</h2>
+      <div class="task">
+        <form action="/" method="POST" class="task-header">
+          <input type="text" name="content" placeholder=" Enter Task" />
+          <button type="submit"><span class="fas fa-plus"></span></button>
+        </form>
+        <ul class="taskList">
+          <li class="taskLi-item">
+            <div class="taskLi-item-name"></div>
+            <a href="" class="edit">
+              <span class="fa-solid fa-pen"></span>
+            </a>
+            <a href="" class="remove">
+              <span class="fa-solid fa-times"></span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>
 </html>

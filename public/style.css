@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+    body {
+    background: rgb(106, 174, 241);
+    }
+    .taskContainer {
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    padding: 100px;
+    width: 600px;
+    transform: translate(-50%,-50%);
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    }
+    .task {
+    width: 400px;
+    }
+    .taskContainer h2 {
+    margin-top: -100px;
+    margin-bottom: 50px;
+    padding: 30px;
+    font-size: 2.5em;
+    }
+    .task-header input {
+    width: 90%;
+    border: none;
+    border-radius: 5px;
+    height: 30px;
+    }
+    .task-header button {
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    border-radius: 70%;
+    box-shadow: 0 1px 2px gray;
+    transition: all 0.2s ease;
+    background-color: rgb(13, 233, 27);
+    }
+    .taskContainer ul {
+    list-style: none;
+    padding-left: 2px;
+    padding-right: 5px;
+    padding-top: 44px;
+    }
+    .taskLi-item {
+    padding: 10px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    background: rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: row;
+    }
+    .taskLi-item form {
+    width: 100%;
+    display: flex;
+    }
+    .taskLi-item input {
+    flex-grow: 2;
+    margin-right: 20px;
+    border-radius: 5px;
+    padding-bottom: 100px;
+    }
+    .taskLi-item button {
+    color: white;
+    border: none;
+    border-radius: 0px;
+    cursor: pointer;
+    padding: 5px;
+    background-color: rgb(51, 212, 100);
+    }
+    .taskLi-item .cancel {
+    color: white;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 5px;
+    background-color: rgb(223, 43, 43);
+    margin-left: 5px;
+    }
+    .taskLi-item div {
+    flex-grow: 2;
+    }
+    .taskLi-item .edit {
+    color : rgb(143, 233, 58);
+    margin-right: 10px;
+    cursor:pointer;
+    text-decoration: none;
+    }
+    .taskLi-item .remove {
+    color : rgb(243, 96, 96);
+    margin-right: 5px;
+    cursor:pointer;
+    text-decoration: none;
+    }

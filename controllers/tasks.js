@@ -58,7 +58,7 @@ taskRouter.get('/show/:id/edit', async (req, res)=>{
 })
 
 //SHOW
-taskRouter.get('/:id', async (req,res)=>{
+taskRouter.get('/show/:id', async (req,res)=>{
     const selectedTask = await Task.findById(req.params.id).exec()
     res.render('show.ejs', {
         task: selectedTask,
