@@ -1,19 +1,17 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    }
-    body {
+
+body {
         background: #2980B9;  /* fallback for old browsers */
         background: -webkit-linear-gradient(to right, #94e2ff, #6DD5FA, #2980B9);  /* Chrome 10-25, Safari 5.1-6 */
         background: linear-gradient(to right, #94e2ff, #6DD5FA, #2980B9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        
     }
     .taskContainer {
     color: white;
-    position: absolute;
+    position: fixed;
     top: 50%;
     left: 50%;
-    padding: 100px;
+    padding-top: 100px;
+    padding-bottom: 100px;
     width: 600px;
     transform: translate(-50%,-50%);
     background: rgba(255, 255, 255, 0.1);
@@ -21,6 +19,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     }
     .task {
     width: 400px;
@@ -128,8 +127,6 @@
         display: flex;
         justify-content: space-around;
     }
-    @media (min-width:320px){
-        .task{
-            width: 80%;
-        }
+    @media (max-width:768px){
+
     }
