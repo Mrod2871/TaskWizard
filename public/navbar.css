@@ -99,7 +99,7 @@ transition: transform 0.4s ease-in-out;
 
 .navbar .menu {
 padding-top: 120px;
-box-shadow: inset 0 0 2000px rgba(255, 255, 255, 0.12);
+box-shadow: inset 0 0 2000px #6DD5FA;
 height: 100vh;
 width: 100%;
 transform: translate(-150%);
@@ -121,6 +121,7 @@ top: 5px;
 right: 15px;
 font-size: 1.2rem;
 color: #000000;
+font-family: 'Bebas Neue', cursive;
 }
 
 .nav input[type="checkbox"]:checked ~ .menu {

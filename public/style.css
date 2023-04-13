@@ -4,7 +4,9 @@
     box-sizing: border-box;
     }
     body {
-    background: rgb(106, 174, 241);
+        background: #2980B9;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #94e2ff, #6DD5FA, #2980B9);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #94e2ff, #6DD5FA, #2980B9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     }
     .taskContainer {
     color: white;
@@ -28,6 +30,7 @@
     margin-bottom: 50px;
     padding: 30px;
     font-size: 2.5em;
+    font-family: 'Bebas Neue', cursive;
     }
     .task-header input {
     width: 90%;
@@ -69,7 +72,6 @@
     flex-grow: 2;
     margin-right: 20px;
     border-radius: 5px;
-    padding-bottom: 100px;
     }
     .taskLi-item button {
     color: white;
@@ -87,9 +89,10 @@
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    padding: 5px;
+    /* padding: 2px; */
     background-color: rgb(223, 43, 43);
     margin-left: 5px;
+    padding-bottom: 0px;
     }
     .taskLi-item div {
     flex-grow: 2;

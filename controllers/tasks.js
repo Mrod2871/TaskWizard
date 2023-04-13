@@ -4,8 +4,6 @@ const mongoose = require('mongoose')
 const taskRouter = express.Router() 
 const Task = require('../models/task')
 
-const taskArray = require('../tasksArray')
-
 //Mongo Connect
 mongoose.connect(process.env.DATABASE_URL)
 
@@ -41,9 +39,9 @@ taskRouter.delete('/:id', async (req,res)=>{
 taskRouter.put('/:id', async (req,res)=>{
     await Task.findByIdAndUpdate(
         req.params.id,
-        req.body
+        req.body,
     )
-    res.redirect(`/show/${req.params.id}`)
+    res.redirect('/home')
 })
 
 //Create
@@ -55,17 +53,11 @@ taskRouter.post('/', async (req, res)=>{
 
 //Edit
 taskRouter.get('/:id/edit', async (req, res)=>{
-    const selectedTask = await Task.findById(req.params.id)
+    const id = req.params.id
+    const selectedTask = await Task.find({})
     res.render('edit.ejs', {
         task: selectedTask,
-    })
-})
-
-//SHOW
-taskRouter.get('/show/:id', async (req,res)=>{
-    const selectedTask = await Task.findById(req.params.id).exec()
-    res.render('show.ejs', {
-        task: selectedTask,
+        taskID: id,
     })
 })
 
