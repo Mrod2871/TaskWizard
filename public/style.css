@@ -49,6 +49,7 @@
     box-shadow: 0 1px 2px gray;
     transition: all 0.2s ease;
     background-color: rgb(13, 233, 27);
+    justify-content: flex-end;
     }
     .taskContainer ul {
     list-style: none;
@@ -118,4 +119,17 @@
         display: flex;
         justify-content: flex-end;
         flex-direction: row;
+    }
+    .createInput{
+        display: flex;
+        justify-content: flex-end;
+    }
+    .task-header{
+        display: flex;
+        justify-content: space-around;
+    }
+    @media (min-width:320px){
+        .task{
+            width: 80%;
+        }
     }

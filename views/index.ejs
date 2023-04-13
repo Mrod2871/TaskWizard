@@ -46,8 +46,11 @@
       <div class="task">
         <form action="/" method="POST" class="task-header">
           <input type="text" name="task" placeholder=" Enter Task" />
-          <button type="submit"><span class="fas fa-plus"></span></button>
+          <div class="createInput">
+            <button type="submit"><span class="fas fa-plus"></span></button>
+          </div>
         </form>
+
         <ul class="taskList">
           <% task.forEach(task => { %>
           <li class="taskLi-item">
