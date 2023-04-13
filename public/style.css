@@ -89,10 +89,14 @@ body {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    /* padding: 2px; */
+    padding: 4px;
     background-color: rgb(223, 43, 43);
     margin-left: 5px;
-    padding-bottom: 0px;
+    font-size: .76rem;
+    }
+    .taskLi-item .sbmt{
+        width: 80px;
+        border-radius: 10%;
     }
     .taskLi-item div {
     flex-grow: 2;
@@ -126,7 +130,4 @@ body {
     .task-header{
         display: flex;
         justify-content: space-around;
-    }
-    @media (max-width:768px){
-
     }
