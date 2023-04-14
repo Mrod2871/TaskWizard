@@ -1,4 +1,4 @@
-# Task Master
+# Task Wizard
 
 A web application that allows the user to create, edit and delete their tasks.
 
