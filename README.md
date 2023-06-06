@@ -22,5 +22,5 @@ Hit this [link](https://taskwizard.herokuapp.com/home) to use the app!
 
 ## Future Enhancements
 
-- Use authentication
+- User authentication
 - A calendar view
